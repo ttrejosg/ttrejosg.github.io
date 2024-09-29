@@ -1,0 +1,99 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  keywords: string;
+}
+
+const { title, description, keywords } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Tomás Trejos Gil" />
+    <meta name="application-name" content={title} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/icon.gif" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script src="../index.ts"></script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #020617;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #edf1f3;
+  }
+  p {
+    tetxt-wrap: pretty;
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  img,
+  svg {
+    height: auto;
+    max-width: 100%;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #06cf67;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #232121;
+  }
+
+  .line {
+    display: block;
+    width: 45px;
+    height: 2px;
+    background-color: #06cf67;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+</style>

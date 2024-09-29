@@ -1,0 +1,85 @@
+---
+interface Props {
+  title: string;
+  items: Array<{
+    icon: string;
+    title: string;
+    subtitle: string;
+    date: string;
+    description: string;
+  }>;
+}
+
+const { title, items } = Astro.props;
+---
+
+<section>
+  <h2 class="title">{title}</h2>
+  <span class="line"></span>
+  <article class="list-container">
+    <ul>
+      {
+        items.map((item) => (
+          <li>
+            <i class={`fa-solid fa-${item.icon}`} />
+            <h3>
+              {item.title} - <span>{item.subtitle}</span>
+            </h3>
+            <time>{item.date}</time>
+            <p>
+              {item.description.split("\n").map((line) => (
+                <>
+                  {line}
+                  <br />
+                </>
+              ))}
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </article>
+</section>
+
+<style>
+  .list-container {
+    padding-top: 1rem;
+  }
+
+  .list-container ul {
+    position: relative;
+    border-left: 1px solid #06cf67;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .list-container ul li {
+    margin-left: 1.8rem;
+    margin-bottom: 1.8rem;
+    i {
+      position: absolute;
+      color: #06cf67;
+      left: -1rem;
+      border-radius: 100%;
+      background: rgb(29, 46, 86);
+      padding: 0.4rem;
+      box-shadow: 0 0 0 0.5rem #020617;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.2rem;
+      span {
+        color: rgb(44, 201, 255);
+      }
+    }
+    time {
+      font-size: 0.9rem;
+      color: #7cfdb8;
+    }
+    p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+  }
+</style>

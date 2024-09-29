@@ -1,0 +1,151 @@
+<div class="popup">
+  <div class="top-bar">
+    <p class="image-name">img1.png</p>
+    <i class="fa-solid fa-xmark close-btn"></i>
+  </div>
+  <button class="arrow-btn left-arrow">
+    <i class="fa-solid fa-arrow-left fa-xl"></i>
+  </button>
+  <button class="arrow-btn right-arrow">
+    <i class="fa-solid fa-arrow-right fa-xl"></i>
+  </button>
+  <img src="static/" class="large-image" alt="" />
+  <h1 class="index">01</h1>
+</div>
+
+<style>
+  .popup {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 80%;
+    height: 80vh;
+    border-radius: 20px;
+    background: rgba(0, 3, 14, 0.75);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    transition: 1s;
+    opacity: 0;
+  }
+
+  .popup.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  .popup.active .close-btn,
+  .popup.active .image-name,
+  .popup.active .index,
+  .popup.active .large-image,
+  .popup.active .arrow-btn {
+    opacity: 1;
+    transition: 0.5s cubic-bezier(0.5, 0.82, 0.2, 1);
+  }
+
+  .top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgb(15 23 42);
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 20px 20px 0 0;
+    i {
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+
+  .image-name {
+    opacity: 0;
+  }
+
+  .close-btn {
+    opacity: 0;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background: #06cf67;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .close-btn:hover {
+    background: #09723d;
+  }
+
+  .arrow-btn {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    border-radius: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+  }
+
+  .left-arrow {
+    left: 10px;
+  }
+
+  .right-arrow {
+    right: 10px;
+    transform: translateY(-50%);
+  }
+
+  .arrow-btn:hover {
+    background: #06cf67;
+  }
+
+  .index {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 80px;
+    font-weight: 100;
+    color: #00bb59;
+    opacity: 0;
+  }
+
+  .large-image {
+    margin-top: 5%;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    opacity: 0;
+  }
+
+  .img-transition {
+    transform: scale(0);
+  }
+  /*Popup Relative*/
+
+  @media (max-width: 600px) {
+    .left-arrow {
+      top: 10%;
+      left: 45%;
+      transform: rotate(90deg);
+    }
+
+    .right-arrow {
+      right: 45%;
+      top: 90%;
+      transform: rotate(90deg);
+    }
+  }
+</style>

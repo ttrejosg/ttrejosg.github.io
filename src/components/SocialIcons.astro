@@ -1,0 +1,48 @@
+---
+interface Props {
+  socialIcons: Array<{
+    href: string;
+    title: string;
+    size: string;
+  }>;
+}
+
+const { socialIcons } = Astro.props;
+---
+
+<ul class="social-icons">
+  {
+    socialIcons.map((icon) => (
+      <li>
+        <a href={icon.href} target="_blank">
+          <i class={`fa-brands fa-${icon.title} fa-${icon.size}`} />
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .social-icons {
+    list-style-type: none;
+    padding-left: 0;
+    justify-content: space-between;
+    width: 120px;
+    display: flex;
+    a {
+      color: white;
+      transition: 0.3s;
+    }
+    i {
+      transition: 0.3s;
+    }
+  }
+
+  .social-icons a:hover {
+    color: #06cf67;
+  }
+
+  .social-icons i:hover {
+    transform: scale(1.2);
+  }
+</style>

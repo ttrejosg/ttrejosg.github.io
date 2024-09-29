@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<article class="technologie-card">
+  <h4>{title}</h4>
+  <ul>
+    <slot />
+  </ul>
+</article>
+
+<style>
+  .technologie-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #06cf67;
+    background: rgb(2, 6, 23);
+    background: linear-gradient(
+      0deg,
+      rgba(2, 6, 23, 1) 0%,
+      rgba(2, 3, 13, 1) 100%
+    );
+    h4 {
+      margin-top: 2rem;
+      font-size: 2rem;
+      color: #31f790;
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      justify-content: center;
+    }
+  }
+</style>

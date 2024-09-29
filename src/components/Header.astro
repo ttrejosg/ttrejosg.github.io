@@ -1,0 +1,60 @@
+---
+import SocialIcons from "./SocialIcons.astro";
+import { socialIcons } from "../data";
+---
+
+<header class="header">
+  <SocialIcons socialIcons={socialIcons} />
+  <section class="header-content">
+    <h4>Hello, I am</h4>
+    <h1>Tomás Trejos Gil</h1>
+    <h6>Systems Engineer | Student</h6>
+  </section>
+</header>
+
+<style>
+  .header {
+    position: relative;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/public/header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .header-content {
+    width: 80%;
+    h1 {
+      font-size: 5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: #00bb59;
+    }
+    h4 {
+      font-size: 3rem;
+      font-weight: lighter;
+      color: white;
+    }
+    h6 {
+      font-size: 1rem;
+      letter-spacing: 5px;
+      color: #2cc9ff;
+    }
+  }
+
+  /* Header Responsive */
+
+  @media (max-width: 1000px) {
+    .header {
+      height: 80vh;
+      padding-left: 2rem;
+    }
+  }
+</style>

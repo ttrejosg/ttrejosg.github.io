@@ -1,0 +1,150 @@
+---
+import TechnologiesCard from "./TechnologiesCard.astro";
+import Git from "../icons/Git.astro";
+import CPP from "../icons/CPP.astro";
+import Java from "../icons/Java.astro";
+import Python from "../icons/Python.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import NodeJS from "../icons/NodeJS.astro";
+import PHP from "../icons/PHP.astro";
+import HTML from "../icons/HTML.astro";
+import CSS from "../icons/CSS.astro";
+import Express from "../icons/Express.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import React from "../icons/React.astro";
+import Vue from "../icons/Vue.astro";
+import NextJS from "../icons/NextJS.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import Mysql from "../icons/Mysql.astro";
+import Postgresql from "../icons/Postgresql.astro";
+import MongoDB from "../icons/MongoDB.astro";
+import Swagger from "../icons/Swagger.astro";
+import GitHub from "../icons/GitHub.astro";
+import VSCode from "../icons/VSCode.astro";
+import Cypress from "../icons/Cypress.astro";
+---
+
+<section>
+  <h2 class="title">Technology Stack</h2>
+  <span class="line"></span>
+  <div class="technologies-container">
+    <TechnologiesCard title="Languages">
+      <li>
+        <CPP width="60" height="60" />
+        <span>C++</span>
+      </li>
+      <li>
+        <Java width="60" height="60" />
+        <span>Java</span>
+      </li>
+      <li>
+        <Python width="60" height="60" />
+        <span>Python</span>
+      </li>
+      <li>
+        <TypeScript width="60" height="60" />
+        <span>TypeScript</span>
+      </li>
+      <li>
+        <NodeJS width="60" height="60" />
+        <span>NodeJS</span>
+      </li>
+      <li>
+        <PHP width="60" height="60" />
+        <span>PHP</span>
+      </li>
+      <li>
+        <HTML width="60" height="60" />
+        <span>HTML</span>
+      </li>
+      <li>
+        <CSS width="60" height="60" />
+        <span>CSS</span>
+      </li>
+    </TechnologiesCard>
+    <TechnologiesCard title="Frameworks and Databases">
+      <li>
+        <Express width="60" height="60" />
+        <span>Express</span>
+      </li>
+      <li>
+        <AstroIcon width="60" height="60" />
+        <span>Astro</span>
+      </li>
+      <li>
+        <React width="60" height="60" />
+        <span>React</span>
+      </li>
+      <li>
+        <Vue width="60" height="60" />
+        <span>Vue</span>
+      </li>
+      <li>
+        <NextJS width="60" height="60" />
+        <span>NextJS</span>
+      </li>
+      <li>
+        <Tailwind width="60" height="60" />
+        <span>Tailwind</span>
+      </li>
+      <li>
+        <Mysql width="60" height="60" />
+        <span>MySQL</span>
+      </li>
+      <li>
+        <Postgresql width="60" height="60" />
+        <span>PostgreSQL</span>
+      </li>
+      <li>
+        <MongoDB width="60" height="60" />
+        <span>MongoDB</span>
+      </li>
+    </TechnologiesCard>
+    <TechnologiesCard title="Tools">
+      <li>
+        <Git width="60" height="60" />
+        <span>Git</span>
+      </li>
+      <li>
+        <GitHub width="60" height="60" />
+        <span>GitHub</span>
+      </li>
+      <li>
+        <Swagger width="60" height="60" />
+        <span>Swagger</span>
+      </li>
+      <li>
+        <VSCode width="60" height="60" />
+        <span>VSCode</span>
+      </li>
+    </TechnologiesCard>
+    <TechnologiesCard title="In learning">
+      <li>
+        <Cypress width="60" height="60" />
+        <span>Cypress</span>
+      </li>
+    </TechnologiesCard>
+  </div>
+</section>
+
+<style>
+  .technologies-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 1000px) {
+    .technologies-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+</style>

@@ -1,0 +1,110 @@
+---
+import SocialIcons from "./SocialIcons.astro";
+import { socialIcons } from "../data";
+---
+
+<section class="about" id="about">
+  <h2 class="title"><span>About</span> me</h2>
+  <span class="line"></span>
+  <article class="about-container">
+    <p>
+      I am a <span>Systems Engineering student</span> at the "Autonomous University
+      of Manizales". My passion in this area the <span
+        >software engineering, back-end development and cybersecurity</span
+      >. I like to learn and do projects on my own, in addition to being up to
+      date with the latest technology.
+    </p>
+    <p>
+      I have great motivation to continue improving skills and growing
+      professionally. I like to accept new challenges, be proactive and capable
+      of generating solutions. Responsible, autonomous person, with the ability
+      to adapt and work in a team.
+    </p>
+    <div class="about-information">
+      <ul class="p-info">
+        <li>
+          <div>
+            <i class="fa-regular fa-envelope"></i><span>Email:</span>
+          </div>
+
+          tomtrejosgil@gmail.com
+        </li>
+        <li>
+          <div><i class="fa-solid fa-at"></i><span>Nickname:</span></div>
+          ttrejosg
+        </li>
+      </ul>
+      <SocialIcons socialIcons={socialIcons} />
+    </div>
+  </article>
+</section>
+
+<style>
+  .about {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    div {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    p {
+      margin-bottom: 0.8rem;
+    }
+    span {
+      color: rgb(77, 210, 255);
+      font-weight: 700;
+    }
+  }
+
+  .p-info {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .p-info li {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    font-size: 1.1rem;
+    border-right: 3px solid #06cf67;
+    padding-right: 1rem;
+    margin-bottom: 0;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  .p-info i {
+    color: #31f790;
+  }
+
+  .p-info li span {
+    font-weight: bold;
+    color: #31f790;
+  }
+
+  /* About Responsive */
+
+  @media (max-width: 1000px) {
+    .p-info {
+      flex-direction: column;
+      li {
+        border-right: none;
+        padding-right: 0;
+        font-size: 1.08rem;
+      }
+    }
+  }
+</style>
