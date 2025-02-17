@@ -12,6 +12,7 @@ let project_name = "";
 let dataLength = 0;
 
 const togglePopup = () => {
+  (largeImage as HTMLImageElement).src = "";
   if (popup) popup.classList.toggle("active");
 };
 

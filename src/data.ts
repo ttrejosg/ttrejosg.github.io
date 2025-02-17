@@ -88,6 +88,15 @@ export const education = [
 
 export const projects = [
   {
+    nameProject: "UCSPY",
+    date: "Nov, 2024 - Dic, 2024",
+    uniqueRepo: "https://github.com/Th3C0deWizard/UCSPy",
+    technologyStack: [Python],
+    content: `This project involves the development of an artificial intelligence model for the purpose of automatically scheduling course schedules given at an educational institution. To achieve this, a constraint satisfaction model and the 'Local Search' technique were used, and the results were evaluated for the potential use of this model in a production environment. For more details, see the analysis published on github (In Spanish)
+    `,
+    numImages: 9,
+  },
+  {
     nameProject: "Certificate_Events",
     date: "Feb, 2024 - Aug, 2024",
     technologyStack: [Vue, Laravel, Mysql],
